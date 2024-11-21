@@ -1,2 +1,2 @@
-# itbuild_auth_js
+# itbuild auth (JavaScript)
 Universal package for itbuild.app authentication process.
