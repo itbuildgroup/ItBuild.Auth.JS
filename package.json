@@ -1,6 +1,6 @@
 {
   "name": "@itbuildgroup/itbuild.auth.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "dist/itbuild_auth.cjs.js",
   "module": "dist/itbuild_auth.esm.js",
