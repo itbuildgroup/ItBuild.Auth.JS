@@ -1,5 +1,5 @@
 import generateKeys from "../helpers/generateKeys";
-import { signInPassKey } from "./signInPassKey";
+import { signInUserKey } from "./signInPassKey";
 import { AuthOptions, LoginInfo } from "../api/model";
 import { ErrorObject } from "../api/model";
 import base64URL_to_Uint8Array from "../utils/base64URL_to_Uint8Array";
@@ -12,10 +12,10 @@ import { initializeNewKey } from "./initializeNewKey";
  * Creates a user key and registers it in the system
  * @param otp one time password from {@link initializeNewKey} call
  * @param options Authorization options, returned from {@link initializeNewKey}
- * @returns User's passkey to authorize via {@link signInPassKey}
+ * @returns User's key to authorize via {@link signInUserKey}
  * @returns object of {@link ErrorObject} on error
  */
-export async function createPassKey(otp: string, options: AuthOptions): Promise<string | ErrorObject> {
+export async function createUserKey(otp: string, options: AuthOptions): Promise<string | ErrorObject> {
     if (!otp.trim() && otp.length !== 6) return null;
 
     const challengeBuf = base64URL_to_Uint8Array(options.fido2_options.challenge) as Buffer;

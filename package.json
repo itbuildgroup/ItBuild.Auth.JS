@@ -1,9 +1,10 @@
 {
-  "name": "itbuild-auth-sdk",
+  "name": "@itbuildgroup/itbuild.auth.js",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/itbuild_auth.cjs.js",
   "module": "dist/itbuild_auth.esm.js",
+  "repository": "https://github.com/itbuildgroup/ItBuild.Auth.JS.git",
   "scripts": {
     "build": "vite build"
   },
@@ -22,5 +23,8 @@
     "typescript": "^5.6.3",
     "vite": "^5.4.11",
     "vite-plugin-dts": "^4.3.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
