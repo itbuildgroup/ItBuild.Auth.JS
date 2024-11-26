@@ -1,18 +1,23 @@
 {
-  "name": "@itbuildgroup/itbuild.auth.js",
-  "version": "1.0.1",
-  "type": "module",
-  "main": "dist/itbuild_auth.cjs.js",
-  "module": "dist/itbuild_auth.esm.js",
-  "repository": "https://github.com/itbuildgroup/ItBuild.Auth.JS.git",
+  "name": "@itbuildgroup/itbuild.auth",
+  "version": "1.0.5",
+  "type": "commonjs",
+  "main": "dist/itbuild_auth.cjs",
+  "repository": {
+    "type:": "git",
+    "url": "git+https://github.com/itbuildgroup/ItBuild.Auth.JS.git"
+  },
   "scripts": {
     "build": "vite build"
   },
+  "files":[
+    "**/*"
+  ],
   "keywords": [],
-  "author": "",
+  "author": "itbuildgroup",
   "types": "./dist/itbuild_auth.d.ts",
-  "license": "ISC",
-  "description": "",
+  "license": "Apache-2.0",
+  "description": "Universal package for itbuild.app authentication process.",
   "dependencies": {
     "elliptic": "^6.5.4",
     "js-sha256": "^0.11.0"
@@ -24,7 +29,8 @@
     "vite": "^5.4.11",
     "vite-plugin-dts": "^4.3.0"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+  "bugs": {
+    "url": "https://github.com/itbuildgroup/ItBuild.Auth.JS/issues"
+  },
+  "homepage": "https://github.com/itbuildgroup/ItBuild.Auth.JS#readme"
 }
