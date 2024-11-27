@@ -1,6 +1,7 @@
-import { setAdvCookie } from "../helpers/setAdvCookie";
 import ApiRequest from "./api-request";
 import { AuthIn, AuthOptions, LoginInfo, TelegramUserInfo, UserLoginLog, UserSessions, GetInfo, UserKey } from "./model";
+
+const projectId = process.env['PROJECT_ID'];
 
 export const apiGetInfo = () =>
   ApiRequest<GetInfo>("auth/v1/get_info", {
@@ -22,8 +23,7 @@ export const apiTelegramLogin = (data: TelegramUserInfo) => {
     credentials: "include",
     headers: {
       Accept: "application/json",
-      resolution: `${screen.width}x${screen.height}`,
-      device_guid: setAdvCookie()
+      device_guid: projectId
     }
   });
 };
@@ -49,8 +49,7 @@ export const apiLogin = (data: LoginInfo) =>
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        resolution: `${screen.width}x${screen.height}`,
-        device_guid: setAdvCookie()
+        device_guid: projectId
       }
     }
   );

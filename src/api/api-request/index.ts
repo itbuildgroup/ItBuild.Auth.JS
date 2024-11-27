@@ -1,12 +1,11 @@
-import { getConfig } from "../../config/sdkConfig";
 import { ApiResponse } from "../model";
 
 const ApiRequest = async <T>(url: string, init?: RequestInit): Promise<ApiResponse<T>> => {
-  const config = getConfig();
+  const apiUrl = process.env['AUTH_API_URL'];
   const headers: Record<string, string> = {};
 
   try {
-    const response = await fetch(config.serverPath + url, init);
+    const response = await fetch(apiUrl + url, init);
 
     if (response.ok) {
       response.headers.forEach((value, key) => {

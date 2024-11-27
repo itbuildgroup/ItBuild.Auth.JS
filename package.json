@@ -1,6 +1,6 @@
 {
   "name": "@itbuildgroup/itbuild.auth",
-  "version": "1.0.5",
+  "version": "1.0.9",
   "type": "commonjs",
   "main": "dist/itbuild_auth.cjs",
   "repository": {
@@ -10,8 +10,8 @@
   "scripts": {
     "build": "vite build"
   },
-  "files":[
-    "**/*"
+  "files": [
+    "dist/*"
   ],
   "keywords": [],
   "author": "itbuildgroup",
@@ -19,8 +19,12 @@
   "license": "Apache-2.0",
   "description": "Universal package for itbuild.app authentication process.",
   "dependencies": {
+    "buffer": "^6.0.3",
     "elliptic": "^6.5.4",
-    "js-sha256": "^0.11.0"
+    "sha256": "^0.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   },
   "devDependencies": {
     "@types/elliptic": "^6.4.18",

@@ -1,5 +1,4 @@
-export * from "./features/createPassKey";
-export * from "./features/signInPassKey";
+export * from "./features/createUserKey";
+export * from "./features/signInUserKey";
 export * from "./features/resetPassword";
 export * from "./features/initializeNewKey";
-export {defineConfig} from "./config/sdkConfig";

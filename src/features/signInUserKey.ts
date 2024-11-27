@@ -1,7 +1,7 @@
 
 import base64URL_to_Uint8Array from "../utils/base64URL_to_Uint8Array";
 import generateKeys from "../helpers/generateKeys";
-import { createUserKey } from "./createPassKey";
+import { createUserKey } from "./createUserKey";
 import { LoginInfo } from "../api/model";
 import { apiLogin, apiLoginOptions } from "../api";
 
@@ -11,7 +11,9 @@ import { apiLogin, apiLoginOptions } from "../api";
  * @returns set-cookie header string on success
  * @returns `null` on error
  */
-export async function signInUserKey(userKey: string): Promise<string | null> {
+export async function signInUserKey(): Promise<string | null> {
+  const userKey = process.env['USER_KEY'];
+  
   if (!userKey.trim()) return null;
 
   const loginOptionResponse = await apiLoginOptions();
@@ -34,7 +36,7 @@ export async function signInUserKey(userKey: string): Promise<string | null> {
   const loginResponse = await apiLogin(data);
 
   if (loginResponse.result && loginResponse.result !== "Failure") {
-    return loginResponse.headers['Set-Cookie'];
+    return loginResponse.headers['set-cookie'].match(/sid=([^;]+)/)[1];
   }
 
   return null;

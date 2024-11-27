@@ -10,10 +10,15 @@
         "esModuleInterop": true,
         "moduleResolution": "node",
         "sourceMap": true,
-        "lib": ["es2020"],
+        "lib": [
+            "es2020",
+            "DOM"
+        ],
         "baseUrl": ".",
         "paths": {
-            "@/*": ["src/*"],
+            "@/*": [
+                "src/*"
+            ],
         }
     },
     "include": [

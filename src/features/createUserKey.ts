@@ -1,5 +1,5 @@
 import generateKeys from "../helpers/generateKeys";
-import { signInUserKey } from "./signInPassKey";
+import { signInUserKey } from "./signInUserKey";
 import { AuthOptions, LoginInfo } from "../api/model";
 import { ErrorObject } from "../api/model";
 import base64URL_to_Uint8Array from "../utils/base64URL_to_Uint8Array";

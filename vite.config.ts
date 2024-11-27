@@ -7,7 +7,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index'),
       name: 'itbuild-auth-sdk',
-      formats: ['es', 'cjs'],
+      formats: ['cjs'],
       fileName: `itbuild_auth`,
     },
     rollupOptions: {

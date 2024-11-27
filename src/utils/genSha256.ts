@@ -1,5 +1,5 @@
-import { Message, sha256 } from "js-sha256";
+import sha256 from "sha256";
 
-const genSha256 = (message: Message) => sha256(message);
+const genSha256 = (message: string): string => sha256(message);
 
 export default genSha256;
